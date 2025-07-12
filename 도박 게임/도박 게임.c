@@ -8,8 +8,8 @@ int main()
     int First, Second, Third, Fourth, Fifth;
     int Bet, Reward, Match;
 
-    printf("µµ¹ÚÀå\n");
-    printf("1°³ ¸ÂÀ¸¸é 1¹è, 2°³¸ÂÀ¸¸é 2¹è...5°³¸ÂÀ¸¸é 5¹è\n");
+    printf("ë„ë°•ì¥\n");
+    printf("1ê°œ ë§ìœ¼ë©´ 1ë°°, 2ê°œë§ìœ¼ë©´ 2ë°°...5ê°œë§ìœ¼ë©´ 5ë°°\n");
     while (Money>0)
     {
         srand(time(NULL));
@@ -19,26 +19,26 @@ int main()
         Fourth = rand() % 10;
         Fifth = rand() % 10;
 
-        printf("\nÇöÀç ÀÚ±İ:%d\n", Money);
-        printf("¹èÆÃÇÒ ±İ¾× ÀÔ·Â");
+        printf("\ní˜„ì¬ ìê¸ˆ:%d\n", Money);
+        printf("ë°°íŒ…í•  ê¸ˆì•¡ ì…ë ¥");
         scanf("%d", &Bet);
         if (Bet>Money || Bet<=0)
         {
-            printf("ÀÚ±İÀÌ ºÎÁ·ÇÕ´Ï´Ù.\n");
+            printf("ìê¸ˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.\n");
             continue;
         }
 
-        printf("\n1ºÎÅÍ 9±îÁöÀÇ ¼ıÀÚ Áß 5°³¸¦ ÇÏ³ª¾¿ ÀÔ·ÂÇÏ¼¼¿ä.\n");
+        printf("\n1ë¶€í„° 9ê¹Œì§€ì˜ ìˆ«ì ì¤‘ 5ê°œë¥¼ í•˜ë‚˜ì”© ì…ë ¥í•˜ì„¸ìš”.\n");
 
-        printf("Ã¹¹øÂ° ¼ıÀÚ ÀÔ·Â");
+        printf("ì²«ë²ˆì§¸ ìˆ«ì ì…ë ¥");
         scanf("%d", &UserFirst);
-        printf("µÎ¹øÂ° ¼ıÀÚ ÀÔ·Â");
+        printf("ë‘ë²ˆì§¸ ìˆ«ì ì…ë ¥");
         scanf("%d", &UserSecond);
-        printf("¼¼¹øÂ° ¼ıÀÚ ÀÔ·Â");
+        printf("ì„¸ë²ˆì§¸ ìˆ«ì ì…ë ¥");
         scanf("%d", &UserThird);
-        printf("³×¹øÂ° ¼ıÀÚ ÀÔ·Â");
+        printf("ë„¤ë²ˆì§¸ ìˆ«ì ì…ë ¥");
         scanf("%d", &UserFourth);
-        printf("´Ù¼¸¹øÂ° ¼ıÀÚ ÀÔ·Â");
+        printf("ë‹¤ì„¯ë²ˆì§¸ ìˆ«ì ì…ë ¥");
         scanf("%d", &UserFifth);
 
         Match=0;
@@ -53,23 +53,23 @@ int main()
         if(UserFifth==Fifth)
             Match++;
 
-        printf("\nÇÃ·¹ÀÌ¾îÀÇ ¼ıÀÚ..%d, %d, %d, %d, %d", UserFirst, UserSecond, UserThird, UserFourth, UserFifth);
-        printf("\nÇà¿îÀÇ ¼ıÀÚ......%d, %d, %d, %d, %d\n", First, Second, Third, Fourth, Fifth);
+        printf("\ní”Œë ˆì´ì–´ì˜ ìˆ«ì..%d, %d, %d, %d, %d", UserFirst, UserSecond, UserThird, UserFourth, UserFifth);
+        printf("\ní–‰ìš´ì˜ ìˆ«ì......%d, %d, %d, %d, %d\n", First, Second, Third, Fourth, Fifth);
 
         if (Match>0)
         {
-            printf("´çÃ·! ÃÑ %d°³ ÀûÁß!\n", Match);
+            printf("ë‹¹ì²¨! ì´ %dê°œ ì ì¤‘!\n", Match);
             Reward=Bet*Match;
             Money+=Reward;
         }
         else
         {
-            printf("³«Ã·... ´ÙÀ½ ±âÈ¸¿¡\n");
+            printf("ë‚™ì²¨... ë‹¤ìŒ ê¸°íšŒì—\n");
             Money-=Bet;
         }
     }
-    printf("³²Àº µ·ÀÌ ¾ø½À´Ï´Ù.\n");
-    printf("¾Æ¹«Å°³ª ´©¸£¸é Á¾·á");
+    printf("ë‚¨ì€ ëˆì´ ì—†ìŠµë‹ˆë‹¤.\n");
+    printf("ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ì¢…ë£Œ");
     getchar();
     getchar();
 }
